@@ -34,6 +34,7 @@ public class ConnectionPool {
 		while (conpool.size() < MAX_CON) {
 			try {
 				Connection con = DriverManager.getConnection(url, username, password);
+				//Connection con = DriverManager.getConnection(url);
 				conpool.add(con);
 			} catch (Exception e) {
 				throw new RuntimeException(e);
